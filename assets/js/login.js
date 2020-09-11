@@ -30,7 +30,7 @@ $('#form_reg').on('submit', e => {
     }
     $.ajax({
         method: 'POST',
-        url: 'http://ajax.frontend.itheima.net/api/reguser',
+        url: '/api/reguser',
         data: data,
         success: res => {
             if (res.status !== 0) {
@@ -45,11 +45,10 @@ $('#form_reg').on('submit', e => {
 $('#form_login').on('submit', function (e) {
     e.preventDefault()
     $.ajax({
-        url: 'http://ajax.frontend.itheima.net/api/login',
+        url: '/api/login',
         method: 'POST',
         //serialize()方法可以快速获得表单数据
         data: $(this).serialize(),
-
         success: res => {
             if (res.status !== 0) {
                 return layer.msg('登录失败', { icon: 5 });
