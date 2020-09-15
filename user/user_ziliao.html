@@ -14,7 +14,8 @@
         <div class="layui-card-header">修改用户信息</div>
         <div class="layui-card-body">
             <!-- form 表单区域 -->
-            <form class="layui-form" action="">
+            <form class="layui-form" lay-filter="formUserInfo">
+                <input type="hidden" name="id" value="">
                 <div class="layui-form-item">
                     <label class="layui-form-label">登录名称</label>
                     <div class="layui-input-block">
@@ -45,6 +46,14 @@
             </form>
         </div>
     </div>
+    <!-- 导入 layui 的 js -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- 导入 jquery -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 导入 baseAPI -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- 导入自己的 js -->
+    <script src="/assets/js/user/user_ziliao.js"></script>
 
 </body>
 
